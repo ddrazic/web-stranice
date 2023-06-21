@@ -1,0 +1,333 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  
+ 
+  background-image: url(../slike/poz.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2;
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: black;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+#containerhistory{
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+#Rubeus{
+    text-align: center;
+    color: black;
+    font-size: 2.5em;
+    font-style: oblique;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+#Rubeus {
+  animation-duration: 1s;
+  animation-name: slidein;
+
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+#gif{
+  text-align: center;
+  padding-top: 70px;
+}
+
+#history{
+  text-align: center;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.callout{
+  border: none;
+  background-color: rgba(204, 200, 185, 0.747);
+  color: rgb(87, 87, 87);
+  font-family: Garamond, serif;
+  font-size: 18px;
+}
+
+b{
+  font-size: 1.6em;
+}
+
+#photo{
+  text-align: center;
+}
+
+#text12{
+padding: 43px;
+}
+
+#trans{
+  background-color: transparent;
+}
+
+#kviz{
+  background-color: transparent;
+  text-align: center;
+  padding-top: 5em;
+  color: black;
+  text-shadow: 2px 2px burlywood;
+}
+
+#podnaslov{
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+#start{
+  background-color: rgb(68, 68, 68);
+  color: whitesmoke;
+  font-size: 1.2em;
+}
+
+#pitanje, #p2, #p3, #p4, #p5{
+  display: none;
+  font-size: 2em;
+  text-align: center;
+  color: #232323;
+  background-color: white;
+  margin-bottom: 50px;
+  animation-duration: 1s;
+  animation-name: zoom-in-zoom-out;
+  
+}
+
+#b1, #b2, #b3, #b4 {
+  display: none;
+  background-color: white;
+  color: #232323;
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+  margin-left: 15%;
+  padding-left: 30%;
+  padding-right: 30%;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+}
+
+#b5, #b6, #b7, #b8, #b9, #b10, #b11, #b12, #b13, #b14, #b15, #b16{
+  display: none;
+  margin-right: 15%;
+  background-color: white;
+  color: #232323;
+  font-size: 1.5em;
+  width: 100%;
+  margin-left: 15%;
+  padding-left: 20%;
+  padding-right: 20%;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1.2, 1.2);
+  }
+  90% {
+    transform: scale(1, 1);
+  }
+}
+
+#rjesenje, #grif{
+  display: none;
+  text-align: center;
+  background-color:rgba(131, 11, 11, 0.767);
+  color: white;
+}
+
+
+#rjesenje1, #raven{
+  display: none;
+  text-align: center;
+  background-color:rgba(3, 18, 155, 0.767);
+  color: white;
+}
+
+#rjesenje2, #huf{
+  display: none;
+  text-align: center;
+  background-color:rgba(161, 91, 25, 0.767);
+  color: white;
+}
+
+#rjesenje3, #sly{
+  display: none;
+  text-align: center;
+  background-color:rgba(0, 90, 23, 0.767);
+  color: white;
+}
+
+#congratz{
+  display: none;
+  text-align: center;
+  background-color: transparent;
+}
+
+#magic{
+  background-color: transparent;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: -13px;
+}

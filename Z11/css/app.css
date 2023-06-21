@@ -1,0 +1,40 @@
+body{
+    background-image: url(../slike/katedrala.jpg); /*URL: https://welcome-to-croatia.com/holiday-destinations/osijek/ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#polozaj{
+    text-align: center;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+}
+
+#cetvrt{
+    text-align: center;
+}
+
+.button{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+ol{
+    padding: 15px;
+    padding-left: 27px;
+    background-color: rgb(65, 243, 184);
+    padding-right: 10px;
+}
+
+#brojevi{
+    background-color: rgb(65, 243, 184);
+}
+
+#button{
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
